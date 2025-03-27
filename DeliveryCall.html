@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Request - PSH Distribution</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <!-- Temporary Navbar -->
+    <div class="header">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./Resources/PSH-logo.png" alt="Logo"></a>
+                </div>
+                <ul class="navLinks">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="Products.html" target="_blank">Products</a></li>
+                    <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
+                    <li><a href="about-us.html" target="_blank">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Request Delivery</h1>
+        <p>Choose from our wide selection of products and place your order below.</p>
+        <form action="/thankYouDelivery" method="post">
+            
+            <!-- Expresso Section -->
+            <div class="section">
+                <h2>Expresso</h2>
+                <label for="expressoType">Select Expresso Type</label>
+                <select id="expressoType" name="expressoType" required>
+                    <option value="">Select Expresso</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="cremoso">Cremoso</option>
+                    <option value="arabica">Arabica</option>
+                </select>
+
+                <label for="expressoQuantity">Quantity (in boxes of 50 pods)</label>
+                <input type="number" id="expressoQuantity" name="expressoQuantity" min="1" placeholder="Enter quantity of boxes" required>
+            </div>
+
+            <!-- Coffee Beans Section -->
+            <div class="section">
+                <h2>Coffee Beans</h2>
+                <label for="coffeeBeansType">Select Coffee Beans</label>
+                <select id="coffeeBeansType" name="coffeeBeansType" required>
+                    <option value="">Select Beans</option>
+                    <option value="house_mix">House Mix</option>
+                    <option value="kenyan">Kenyan</option>
+                    <option value="dark_roast">Dark Roast</option>
+                </select>
+
+                <label for="coffeeBeansQuantity">Quantity (in bags of 2lbs)</label>
+                <input type="number" id="coffeeBeansQuantity" name="coffeeBeansQuantity" min="1" placeholder="Enter quantity of boxes" required>
+            </div>
+
+            <!-- Other Items Section -->
+            <div class="section">
+                <h2>Other Items</h2>
+                <label for="milkersBox">Milkers Box</label>
+                <input type="number" id="milkersBox" name="milkersBox" min="0" placeholder="Enter quantity">
+                
+                <label for="creamersBox">Creamers Box</label>
+                <input type="number" id="creamersBox" name="creamersBox" min="0" placeholder="Enter quantity">
+                
+                <label for="stirSticks">Stir Sticks</label>
+                <input type="number" id="stirSticks" name="stirSticks" min="0" placeholder="Enter quantity">
+                
+                <label for="customRequest">Custom Request</label>
+                <textarea id="customRequest" name="customRequest" rows="4" placeholder="Enter any special requests"></textarea>
+            </div>
+
+            <button type="submit">Submit Delivery Request</button>
+        </form>
+    </div>
+
+    <!-- Temporary Footer -->
+    <footer>
+        <p>&copy; 2025 PSH Distribution - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
